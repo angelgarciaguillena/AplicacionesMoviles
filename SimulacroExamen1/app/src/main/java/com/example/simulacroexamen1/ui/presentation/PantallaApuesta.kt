@@ -39,6 +39,7 @@ fun PantallaApuesta(navController: NavController, playerViewModel: PlayerViewMod
         Row(
             verticalAlignment = Alignment.CenterVertically
         ){
+
             Text("Cantidad apostada", color = ColorTexto)
             TextField(
                 value = cantidadApuesta,
