@@ -6,9 +6,3 @@ data class Dispositivo(
     var estado: Boolean
 )
 
-enum class TipoDispositivo {
-    LUZ,
-    SENSOR,
-    RIESGO,
-    OTRO
-}
