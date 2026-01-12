@@ -84,7 +84,7 @@ fun PantallaLista(navController: NavController, garajeViewModel: GarajeViewModel
 
 @Composable
 fun TarjetaVehiculo(plaza: Plaza, navController: NavController, garajeViewModel: GarajeViewModel){
-    Card(
+    Card
         modifier = Modifier
             .fillMaxSize()
             .padding(10.dp)
