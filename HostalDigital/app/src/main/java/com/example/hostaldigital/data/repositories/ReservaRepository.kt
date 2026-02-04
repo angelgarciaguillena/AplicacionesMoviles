@@ -8,11 +8,23 @@ import kotlinx.coroutines.flow.Flow
 
 class ReservaRepository(private val reservasDao: ReservaDao) {
 
-    fun getReservas(): Flow<List<Reserva>>{
+    fun getReservasAll(): Flow<List<Reserva>>{
         return reservasDao.obtenerReservas()
     }
 
-    fun guardarReserva(reserva: Reserva){
-        reservasDao.agregarReserva(reserva)
+    fun getReservasActivasByUsuario(userId: Int): Flow<List<Reserva>> {
+        return reservasDao.getReservasActivasByUsuario(userId)
+    }
+
+    fun getReservasByHabitacion(habitacionId: Int): Flow<List<Reserva>> {
+        return reservasDao.getReservasByHabitacion(habitacionId)
+    }
+
+    fun agregarReserva(reserva: Reserva): Long{
+        return reservasDao.agregarReserva(reserva)
+    }
+
+    fun cancelarReserva(id: Int) {
+        reservasDao.cancelarReserva(id)
     }
 }

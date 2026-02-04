@@ -5,23 +5,10 @@ import androidx.room.PrimaryKey
 import androidx.room.ForeignKey
 
 
-@Entity(tableName = "habitaciones",
-    foreignKeys = [
-        ForeignKey(
-            entity = Usuario::class,
-            parentColumns = ["id"],
-            childColumns = ["id"]
-        ),
-        ForeignKey(
-            entity = Reserva::class,
-            parentColumns = ["id"],
-            childColumns = ["id"]
-        )
-    ]
-)
+@Entity(tableName = "habitaciones")
 data class Habitacion(
     @PrimaryKey(autoGenerate = true)
-    val id: Int,
+    val id: Int = 0,
     val numeroHabitacion: Int,
     val tipoHabitacion: String,
     val numeroPersonas: Int,

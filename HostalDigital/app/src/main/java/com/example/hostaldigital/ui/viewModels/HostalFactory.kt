@@ -8,6 +8,6 @@ import com.example.hostaldigital.data.repositories.UsuarioRepository
 
 class HostalFactory(private val habitacionRepository: HabitacionRepository, private val reservaRepository: ReservaRepository, private val usuarioRepository: UsuarioRepository) : ViewModelProvider.Factory {
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
-        return HostalViewModel(habitacionRepository, reservaRepository, usuarioRepository) as T
+        return HostalViewModel(usuarioRepository, habitacionRepository, reservaRepository) as T
     }
 }

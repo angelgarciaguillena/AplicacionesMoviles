@@ -60,10 +60,10 @@ class MainActivity : ComponentActivity() {
         setContent {
             HostalDigitalTheme {
                 val navController = rememberNavController()
-                NavHost(navController = navController, startDestination = "pantallaBienvenida"){
+                NavHost(navController = navController, startDestination = "pantallaHabitaciones"){
                     composable("pantallaLogin") { PantallaLogin(navController, hostalViewModel) }
                     composable("pantallaRegistro") { PantallaRegistro(navController, hostalViewModel) }
-                    composable("pantallHabitaciones") { PantallaHabitaciones(navController, hostalViewModel) }
+                    composable("pantallaHabitaciones") { PantallaHabitaciones(navController, hostalViewModel) }
                     composable("pantallaDetallesHabitacion") { PantallaDetallesHabitacion(navController, hostalViewModel) }
                     composable("pantallaReserva") { PantallaReserva(navController, hostalViewModel) }
                     composable("pantallaAgregarHabitacion") { PantallaAgregarHabitacion(navController, hostalViewModel) }
